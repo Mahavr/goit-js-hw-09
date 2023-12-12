@@ -26,7 +26,7 @@ function onSubmit(evt) {
   const delayStep = parseInt(form.elements.step.value);
   const promiseAmount = form.elements.amount.value;
   let delay = firstDelay;
-  if ((firstDelay < 0 || delayStep) < 0 || promiseAmount < 1) {
+  if (firstDelay < 0 || delayStep < 0 || promiseAmount < 1) {
     Report.failure('Try again🐱‍👤', 'All numbers must be positive', 'Okay');
   } else {
     for (let i = 1; i <= promiseAmount; i++) {
@@ -36,7 +36,7 @@ function onSubmit(evt) {
             success: {
               background: '#78a5a3',
               textColor: '#444c5c',
-              notiflixIconColor:'#444c5c',
+              notiflixIconColor: '#444c5c',
             },
           });
         })
@@ -45,7 +45,7 @@ function onSubmit(evt) {
             failure: {
               background: '#ce5a57',
               textColor: '#444c5c',
-              notiflixIconColor:'#444c5c',
+              notiflixIconColor: '#444c5c',
             },
           });
         });
